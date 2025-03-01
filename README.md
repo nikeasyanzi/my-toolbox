@@ -1,5 +1,5 @@
 # Introduction
-This repository collects dockerfiles for my daily development.
+This repository collects dockerfiles/tools for my daily development.
 
 # Docker files
 ## Universal linter  
