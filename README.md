@@ -1,15 +1,49 @@
-# Introduction
-This repository collects dockerfiles/tools for my daily development.
+# Development environment docker images
 
-# Docker files
-## Universal linter  
-  Dockerfile for linters and syntax checkers using pre-commit hook
+This repo contains the Dockerfile for building the build environment.
+In addition, this repo also contain files for hosting a Docker registry server.
 
-## Alpine googletest
-  Dockerfile for googletest on Alpine container image build
+Looking for?
 
-## How to use
- run `./buildMultiPayload.sh folder_name` to build container image
+- [Installing scripts as users](#installation)
+- [Building a new container](/container/README.md)
+- [Hosting a server](/server/README.md)
 
-## Reference
-  N/A
+# Installation
+
+You can run this command for one liner installation without git clone.
+
+```
+su -c "bash <(curl -s -L https://raw.github.hpe.com/craig-yang/XXXXXX)"
+```
+
+# Example Usages
+
+<TODO>
+
+# Config docker proxy
+
+1. Create the directory if not present
+
+```bash
+sudo mkdir -p /etc/systemd/system/docker.service.d
+```
+
+2. Edit /etc/systemd/system/docker.service.d/proxy.conf
+
+```bash
+[Service]
+Environment="HTTP_PROXY={ADDRESS}[:PORT]" "NO_PROXY=localhost,127.0.0.1"
+Environment="HTTPS_PROXY={ADDRESS}[:PORT]" "NO_PROXY=localhost,127.0.0.1"
+```
+
+3. Ask module to reload configs and restart the service to take effect
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+## Helpful links
+
+- [Insecure way to froce docker using http](https://docs.docker.com/registry/insecure/).
