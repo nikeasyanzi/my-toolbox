@@ -1,0 +1,9 @@
+[submodule "cmake-examples"]
+	path = cmake-examples
+	url = git@github.com:ttroy50/cmake-examples.git
+[submodule "shell-scripting-templates"]
+	path = shell-scripting-templates
+	url = https://github.com/natelandau/shell-scripting-templates.git
+[submodule "gtest-cmake-example"]
+	path = gtest-cmake-example
+	url = git@github.com:dacorvo/gtest-cmake-example.git
