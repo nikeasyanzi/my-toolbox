@@ -1,7 +1,7 @@
 # Development environment docker images
 
 This repo contains the Dockerfile for building the build environment.
-In addition, this repo also contain files for hosting a Docker registry server.
+In addition, this repo also contains files for hosting a Docker registry server.
 
 Looking for?
 
@@ -11,11 +11,8 @@ Looking for?
 
 # Installation
 
-You can run this command for one liner installation without git clone.
+<TODO>
 
-```
-su -c "bash <(curl -s -L https://raw.github.hpe.com/craig-yang/XXXXXX)"
-```
 
 # Example Usages
 
